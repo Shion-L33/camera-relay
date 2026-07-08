@@ -1,0 +1,13 @@
+{
+  "name": "esp32-camera-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Memory-only ESP32-CAM relay for live dashboard viewing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
