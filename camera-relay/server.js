@@ -25,6 +25,10 @@ app.get('/health', (_req, res) => {
   });
 });
 
+app.get('/favicon.ico', (_req, res) => {
+  const favicon = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAIAAeIhvAAAAAElFTkSuQmCC', 'base64');
+  res.type('image/x-icon').send(favicon);
+});
 app.post('/upload', (req, res) => {
   if (req.get('x-camera-key') !== cameraKey) {
     return res.status(401).json({ error: 'unauthorized' });
